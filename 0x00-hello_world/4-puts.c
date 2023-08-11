@@ -1,8 +1,8 @@
 #include <stdio.h>
-/*
-*main a c script that print a function call push
+/**
+*main-Entry point 
 *
-*return: 0;
+*return: 0 Always (success);
 */
 int main(void)
 {
