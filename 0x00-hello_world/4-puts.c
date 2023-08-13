@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-*main-Entry point
-*
+*main- printing a c program
+*I cant use printf
 *Return: Always 0 (Success)
 */
 int main(void)
