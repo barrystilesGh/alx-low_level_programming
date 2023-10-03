@@ -1,4 +1,4 @@
-nclude <elf.h>
+#include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -23,17 +23,17 @@ void close_elf(int elf);
  */
 void check_elf(unsigned char *e_ident)
 {
-        int index;
-        for (index = 0; index < 4; index++)
-        {
-                if (e_ident[index] != 127 &&
-                    e_ident[index] != 'E' &&
-                    e_ident[index] != 'L' &&
-                    e_ident[index] != 'F')
-                {
+	int index;
+	for (index = 0; index < 4; index++)
+	{
+		if (e_ident[index] != 127 &&
+				e_ident[index] != 'E' &&
+				e_ident[index] != 'L' &&
+				e_ident[index] != 'F')
+		{
                         dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
                         exit(98);
-                }
+        }
         }
 }
 /**
